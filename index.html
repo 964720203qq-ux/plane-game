@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>星翼突击</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="gameCanvas" width="480" height="720" aria-label="星翼突击游戏画面"></canvas>
+
+      <section class="hud" aria-label="游戏状态">
+        <div>
+          <span>分数</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>生命</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div>
+          <span>火力</span>
+          <strong id="power">1</strong>
+        </div>
+        <div class="energy-cell">
+          <span>能量</span>
+          <strong id="energyValue">0%</strong>
+          <i id="energyFill"></i>
+        </div>
+        <button id="skillButton" type="button" title="释放电磁必杀">⚡</button>
+        <button id="pauseButton" type="button" title="暂停/继续">Ⅱ</button>
+      </section>
+
+      <section id="startScreen" class="overlay">
+        <div class="panel">
+          <h1>星翼突击</h1>
+          <p>拖动或使用 WASD / 方向键移动，击落敌机蓄能，满能量后按 X 或点闪电释放电磁必杀。</p>
+          <button id="startButton" type="button">开始游戏</button>
+        </div>
+      </section>
+
+      <section id="gameOverScreen" class="overlay hidden">
+        <div class="panel">
+          <h2>任务结束</h2>
+          <dl>
+            <div>
+              <dt>本局分数</dt>
+              <dd id="finalScore">0</dd>
+            </div>
+            <div>
+              <dt>最高分</dt>
+              <dd id="bestScore">0</dd>
+            </div>
+          </dl>
+          <button id="restartButton" type="button">再来一局</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
