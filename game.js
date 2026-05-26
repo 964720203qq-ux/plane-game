@@ -44,6 +44,7 @@ const player = {
   speed: 360,
   lives: 3,
   power: 1,
+  energy: 0,
   cooldown: 0,
   invincible: 0,
 };
