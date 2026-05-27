@@ -35,7 +35,21 @@
       <section id="startScreen" class="overlay">
         <div class="panel">
           <h1>星翼突击</h1>
-          <p>拖动或使用 WASD / 方向键移动，击落敌机蓄能，满能量后按 X 或点闪电释放电磁必杀。</p>
+          <p>选择战机后出击。拖动或使用 WASD / 方向键移动，满能量后按 X 或点闪电释放必杀。</p>
+          <div class="ship-select" aria-label="选择战机">
+            <button class="ship-card active" type="button" data-ship="basic">
+              <span>基础款</span>
+              <small>均衡子弹 / 电磁风暴</small>
+            </button>
+            <button class="ship-card" type="button" data-ship="advanced">
+              <span>进阶款</span>
+              <small>聚束激光 / 激光矩阵</small>
+            </button>
+            <button class="ship-card" type="button" data-ship="king">
+              <span>王者款</span>
+              <small>裂变弹幕 / 雷霆审判</small>
+            </button>
+          </div>
           <button id="startButton" type="button">开始游戏</button>
         </div>
       </section>
